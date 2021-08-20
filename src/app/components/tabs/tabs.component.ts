@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tab } from 'app/tab/tab.interface';
+import { Tab } from '../../interfaces/tab.interface';
 
 @Component({
   selector: 'app-tabs',
@@ -8,26 +8,26 @@ import { Tab } from 'app/tab/tab.interface';
 })
 export class TabsComponent implements OnInit {
 
-  public tabs:Tab[] = [];
+  public tabs: Tab[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    this.addTab({isActive:false, title:"tab 1"});
-    this.addTab({isActive:false, title:"tab 2"});
-    this.addTab({isActive:false, title:"tab 3"});
-    this.addTab({isActive:false, title:"tab 4"});
+    this.addTab({ isActive: false, title: "tab 1" });
+    this.addTab({ isActive: false, title: "tab 2" });
+    this.addTab({ isActive: false, title: "tab 3" });
+    this.addTab({ isActive: false, title: "tab 4" });
   }
 
-  addTab(tab:Tab){
+  addTab(tab: Tab) {
     if (this.tabs.length === 0) {
       tab.isActive = true;
     }
     this.tabs.push(tab);
   }
 
-  selectTab(tab:Tab) {
-    for (let tab of this.tabs){
+  selectTab(tab: Tab) {
+    for (let tab of this.tabs) {
       tab.isActive = false;
     }
     tab.isActive = true;

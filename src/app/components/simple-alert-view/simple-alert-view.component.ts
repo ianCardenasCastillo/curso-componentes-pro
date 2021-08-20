@@ -7,19 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SimpleAlertViewComponent implements OnInit {
 
-  @Input() message:string;
-  @Input() title:string;
-  public visible:boolean = true;
+  @Input() message: string;
+  @Input() title: string;
 
-  ngOnInit() {
-  }
+  public visible: boolean = true;
 
-  public dismiss(){
+  ngOnInit() { }
+  
+  public dismiss() {
     this.visible = false;
   }
 
-  public show(){
+  public show() {
     this.visible = true;
-  }  
-
+  }
+  
 }

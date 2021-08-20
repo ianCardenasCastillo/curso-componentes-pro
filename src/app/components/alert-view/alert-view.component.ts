@@ -10,11 +10,10 @@ export class AlertViewComponent implements OnInit {
   @Output() onCancel = new EventEmitter<void>();
   @Output() onSubmit = new EventEmitter<number>();
 
-  public time:number = 0;
+  public time: number = 0;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
